@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 public class InteractRunner {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        try {
+        try (Scanner sc = new Scanner(System.in)) {
             Calculator calc = new Calculator();
             while (true) {
                 calc.cleanResult();
@@ -28,8 +27,6 @@ public class InteractRunner {
                 }
                 System.out.println("Результат: " + calc.getResult());
             }
-        } finally {
-            sc.close();
         }
     }
 }
