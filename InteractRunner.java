@@ -1,5 +1,7 @@
+/**
+ * Класс для использования калькулятора из консоли
+ */
 import java.util.Scanner;
-
 public class InteractRunner {
     public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
@@ -25,7 +27,7 @@ public class InteractRunner {
                         case 2 -> calc.sub(first, second);
                         case 3 -> calc.mul(first, second);
                         case 4 -> calc.div(first, second);
-                    }
+                        }
                     System.out.println("Результат: " + calc.getResult());
                 } catch (NumberFormatException e) {
                     System.out.println("Недопустимый ввод, разрешены только числа.");
