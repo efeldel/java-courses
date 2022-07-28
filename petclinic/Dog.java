@@ -15,4 +15,9 @@ public class Dog extends Pet{
     public void makeSound() {
         System.out.println("Гав!");
     }
+
+    @Override
+    public String toString() {
+        return "Собака " + getName();
+    }
 }

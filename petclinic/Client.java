@@ -5,11 +5,39 @@ package petclinic;
 public class Client {
     private static int count;
     private final int id = count++;
-    private final String name;
-    private final Pet pet;
+    private String name;
+    private Pet pet;
 
     public Client(String name, Pet pet) {
         this.name = name;
         this.pet = pet;
+    }
+
+    public int getId() {
+        return this.id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
+
+    @Override
+    public String toString() {
+        return "Клиент: " +
+                "id = " + id +
+                ", имя = '" + name + '\'' +
+                ", животное = " + pet;
     }
 }
