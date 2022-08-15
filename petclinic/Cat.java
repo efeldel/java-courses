@@ -1,6 +1,6 @@
 package petclinic;
 /**
- * РљР»Р°СЃСЃ РѕРїРёСЃС‹РІР°РµС‚ РґРѕРјР°С€РЅРµРµ Р¶РёРІРѕС‚РЅРѕРµ: РєРѕС‚
+ * Класс описывает домашнее животное: кот
  */
 public class Cat extends Pet{
 
@@ -13,11 +13,11 @@ public class Cat extends Pet{
      */
     @Override
     public void makeSound() {
-        System.out.println("РњСЏСѓ!");
+        System.out.println("Мяу!");
     }
 
     @Override
     public String toString() {
-        return "РљРѕС‚/РєРѕС€РєР° " + getName();
+        return "кот/кошка " + getName();
     }
 }

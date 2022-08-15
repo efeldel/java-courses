@@ -1,6 +1,6 @@
 package petclinic;
 /**
- * РљР»Р°СЃСЃ РѕРїРёСЃС‹РІР°РµС‚ РєР»РёРµРЅС‚Р°
+ * Класс описывает клиента
  */
 public class Client {
     private static int count;
@@ -33,11 +33,15 @@ public class Client {
         this.pet = pet;
     }
 
+    public void removePet() {
+        this.pet = new Pet("нет питомца");
+    }
+
     @Override
     public String toString() {
-        return "РљР»РёРµРЅС‚: " +
+        return "Клиент: " +
                 "id = " + id +
-                ", РёРјСЏ = '" + name + '\'' +
-                ", Р¶РёРІРѕС‚РЅРѕРµ = " + pet;
+                ", имя: '" + name + '\'' +
+                ", питомец: " + pet;
     }
 }

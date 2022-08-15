@@ -1,6 +1,6 @@
 package petclinic;
 /**
- * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РґРѕРјР°С€РЅРёС… Р¶РёРІРѕС‚РЅС‹С…
+ * Базовый класс для домашних животных
  */
 public class Pet {
     private String name;
@@ -10,14 +10,14 @@ public class Pet {
     }
 
     /**
-     * РР·РґР°С‚СЊ Р·РІСѓРє
+     * Издать звук
      */
     public void makeSound() {
         System.out.println("");
     }
 
     /**
-     * РџРѕР»СѓС‡РёС‚СЊ РёРјСЏ
+     * Получить имя
      */
     public String getName() {
         return name;
@@ -25,5 +25,10 @@ public class Pet {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return getName();
     }
 }
