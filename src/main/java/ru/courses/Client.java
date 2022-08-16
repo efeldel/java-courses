@@ -1,4 +1,5 @@
-package petclinic;
+package ru.courses;
+
 /**
  * Класс описывает клиента
  */

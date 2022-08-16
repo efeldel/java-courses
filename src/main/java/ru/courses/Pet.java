@@ -1,4 +1,5 @@
-package petclinic;
+package ru.courses;
+
 /**
  * Базовый класс для домашних животных
  */
