@@ -1,5 +1,7 @@
 package ru.courses;
 
+import java.util.ArrayList;
+
 /**
  * Класс описывает клинику
  */
@@ -7,12 +9,12 @@ public class Clinic {
     /**
      * Список клиентов
      */
-    private final Client[] clients;
+    private final ArrayList<Client> clients;
     /**
-     * @param size Количество клиентов (размер массива)
+     *
      */
-    public Clinic(final int size) {
-        this.clients = new Client[size];
+    public Clinic() {
+        clients = new ArrayList<>();
     }
 
     /**
@@ -20,56 +22,30 @@ public class Clinic {
      * @param client Клиент
      */
     public void addClient (final Client client) {
-        this.clients[client.getId()] = client;
+        this.clients.add(client);
     }
 
     /**
      * Искать клиентов по имени питомца
      * @param name Имя питомца
-     * @return Массив клиентов или null
+     * @return ArrayList клиентов или null
      */
-    public Client[] getClientsByPetName(final String name) {
-        Client[] temp = new Client[clients.length];
-        int i = 0;
-        for (Client client : clients) {
-            if (client != null && client.getPet().getName().equalsIgnoreCase(name)) {
-                temp[i] = client;
-                i++;
-            }
-        }
-        Client[] result;
-        if (i > 0) {
-            result = new Client[i];
-            for (int j = 0; j < i; j++) {
-                result[j] = temp[j];
-            }
-        }
-        else result = null;
+    public ArrayList<Client> getClientsByPetName(final String name) {
+        ArrayList<Client> result = new ArrayList<>();
+        for (Client c : clients)
+            if (c.getPet().getName().equalsIgnoreCase(name)) result.add(c);
         return result;
     }
 
     /**
      * Искать клиентов по имени
      * @param name Имя клиента
-     * @return Массив клиентов или null
+     * @return ArrayList клиентов или null
      */
-    public Client[] getClientsByName(final String name) {
-        Client[] temp = new Client[clients.length];
-        int i = 0;
-        for (Client client : clients) {
-            if (client != null && client.getName().equalsIgnoreCase(name)) {
-                temp[i] = client;
-                i++;
-            }
-        }
-        Client[] result;
-        if (i > 0) {
-            result = new Client[i];
-            for (int j = 0; j < i; j++) {
-                result[j] = temp[j];
-            }
-        }
-        else result = null;
+    public ArrayList<Client> getClientsByName(final String name) {
+        ArrayList<Client> result = new ArrayList<>();
+        for (Client c : clients)
+            if (c.getName().equalsIgnoreCase(name)) result.add(c);
         return result;
     }
 
@@ -78,9 +54,7 @@ public class Clinic {
      * @param name Имя клиента
      */
     public void removeClient(final String name) {
-        for (int i = 0; i < clients.length; i++) {
-            if (clients[i] != null && clients[i].getName().equalsIgnoreCase(name)) clients[i] = null;
-        }
+        clients.removeIf(c -> c.getName().equalsIgnoreCase(name));
     }
 
     /**
@@ -88,15 +62,13 @@ public class Clinic {
      * @param id ID клиента
      */
     public void removeClient(final int id) {
-        for (int i = 0; i < clients.length; i++) {
-            if (clients[i] != null && clients[i].getId() == id) clients[i] = null;
-        }
+        clients.removeIf(c -> c.getId() == id);
     }
     /**
      * Получить список клиентов
-     * @return Массив всех клиентов или null
+     * @return ArrayList всех клиентов или null
      */
-    public Client[] getAllClients() {
+    public ArrayList<Client> getAllClients() {
         return clients;
     }
 }

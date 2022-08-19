@@ -1,5 +1,7 @@
 package ru.courses;
 
+import java.util.Objects;
+
 /**
  * Базовый класс для домашних животных
  */
@@ -31,5 +33,18 @@ public class Pet {
     @Override
     public String toString() {
         return getName();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pet pet = (Pet) o;
+        return Objects.equals(name, pet.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }

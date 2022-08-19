@@ -1,12 +1,28 @@
 package ru.courses;
 
+import java.util.Scanner;
+
 /**
  * Класс описывает работу клиники
  */
 public class ClinicRunner {
     public static void main(String[] args) {
-        final Clinic clinic = new Clinic(10);
+        final Clinic clinic = new Clinic();
 
+//        try (Scanner sc = new Scanner(System.in)) {
+//            while (true) {
+//                try {
+//                    System.out.println("Введите первое число:");
+//                    int first = Integer.parseInt(sc.next());
+//                    System.out.println("Введите второе число:");
+//                    int second = Integer.parseInt(sc.next());
+//                    System.out.println("Выберите действие:");
+//                    System.out.println("1. Сложить");
+//                    System.out.println("2. Вычесть");
+//                    System.out.println("3. Умножить");
+//                    System.out.println("4. Разделить");
+//                    System.out.println("0. Выход");
+//                    switch (Integer.parseInt(sc.next())) {
         clinic.addClient(new Client("Антон", new Cat("Анфиса")));
         clinic.addClient(new Client("Инна", new Dog("Трезор")));
         clinic.addClient(new Client("Алена", new Dog("Мумука")));
@@ -26,7 +42,8 @@ public class ClinicRunner {
         clinic.removeClient(1);
 
         System.out.println("Удаляем клиента с именем Алла");
-        clinic.removeClient("Алла");
+            clinic.removeClient("Алла");
+
 
         System.out.println("Удаляем питомца клиенту с именем Макс");
         for (Client c : clinic.getClientsByName("макс"))
