@@ -50,6 +50,18 @@ public class Clinic {
     }
 
     /**
+     * Искать клиентов по ID
+     * @param id  ID клиента
+     * @return клиент или null
+     */
+    public Client getClientsById(final int id) {
+        Client result = null;
+        for (Client c : clients)
+            if (c.getId() == id) result = c;
+        return result;
+    }
+
+    /**
      * Удалить клиента по имени
      * @param name Имя клиента
      */
