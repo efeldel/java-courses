@@ -5,49 +5,22 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ru.courses</groupId>
-    <artifactId>petclinic</artifactId>
+    <artifactId>java-courses</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-utils</artifactId>
-            <version>1.1</version>
-        </dependency>
-    </dependencies>
+    <name>Java Courses</name>
+    <url>http://maven.apache.org</url>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <configuration>
-                    <archive>
-                        <index>true</index>
-                        <manifest>
-                            <mainClass>ru.courses.ClinicRunner</mainClass>
-                            <addClasspath>true</addClasspath>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+
+    <modules>
+        <module>petclinic</module>
+        <module>petclinic-web</module>
+    </modules>
 </project>
