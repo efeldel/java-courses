@@ -11,9 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="java-courses" target="18" />
-      <module name="petclinic" target="18" />
-      <module name="petclinic-web" target="18" />
+      <module name="untitled" target="18" />
     </bytecodeTargetLevel>
   </component>
 </project>
