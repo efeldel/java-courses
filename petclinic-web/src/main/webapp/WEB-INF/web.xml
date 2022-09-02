@@ -46,14 +46,4 @@
         <url-pattern>/client/delete</url-pattern>
     </servlet-mapping>
 
-<!--    <servlet>-->
-<!--        <servlet-name>ClinicServlet</servlet-name>-->
-<!--        <servlet-class>ru.courses.servlets.ClinicServlet</servlet-class>-->
-<!--    </servlet>-->
-
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>ClinicServlet</servlet-name>-->
-<!--        <url-pattern>/</url-pattern>-->
-<!--    </servlet-mapping>-->
-
 </web-app>

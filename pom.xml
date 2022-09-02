@@ -16,7 +16,7 @@
     </properties>
 
     <name>Java Courses</name>
-    <url>http://maven.apache.org</url>
+    <url>https://maven.apache.org</url>
 
 
     <modules>

@@ -36,4 +36,14 @@ public class ClientCache {
     public Client get(final int id) {
         return this.clients.get(id);
     }
+    
+    public Client findByName(final String name) {
+        Client result = null;
+        for (Client client : this.clients.values()) {
+            if (client.getName().equalsIgnoreCase(name))
+                result = client;
+            else result = new Client("не найден",new Pet("заглушка"));
+        }
+        return result;
+    }
 }
